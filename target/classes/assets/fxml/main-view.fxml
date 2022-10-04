@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se233.project.controller.ViewController">
+   <children>
+      <ImageView fitHeight="674.0" fitWidth="1199.0" layoutX="-299.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wallpaperbetter.com_1920x1080.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="366.0" layoutY="40.0" prefHeight="700.0" prefWidth="600.0">
+         <children>
+             <Button fx:id="addButton" layoutX="-4.0" layoutY="280.0" mnemonicParsing="false" style="-fx-border-color: black" text="Add file(s)" />
+             <Button fx:id="browseButton" layoutX="76.5" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" style="-fx-border-color: black" text="Browse..." />
+             <ChoiceBox fx:id="extensionChoiceBox" layoutX="153.0" layoutY="280.0" prefHeight="25.0" prefWidth="67.0" style="-fx-border-color: black" />
+            <Label layoutX="-4.0" layoutY="325.0" text="Destination of archived/extracted file :" />
+             <TextField fx:id="directoryTextField" layoutX="-4.0" layoutY="350.0" prefHeight="25.0" prefWidth="205.0" promptText="Enter the directory" />
+             <Label layoutX="-4.0" layoutY="390.0" text="File name :" />
+             <TextField fx:id="fileNameTextField" layoutX="-4.0" layoutY="415.0" prefWidth="205.0" promptText="Enter the file name" />
+             <Label fx:id="passwordLabel" layoutX="-4.0" layoutY="455.0" text="Password :" />
+             <PasswordField fx:id="passwordField" layoutX="-4.0" layoutY="480.0" prefWidth="205.0" promptText="Enter the password" />
+            <Button fx:id="archiveButton" layoutX="-4.0" layoutY="525.0" mnemonicParsing="false" style="-fx-border-color: green" text="Archive/Compress" />
+             <Button fx:id="extractButton" layoutX="126.0" layoutY="525.0" mnemonicParsing="false" style="-fx-border-color: green" text="Extract" />
+             <ProgressBar fx:id="progressBar" layoutX="-5.0" layoutY="573.0" prefHeight="20.0" prefWidth="223.0" progress="0.0" />
+             <Label fx:id="progressLabel" layoutX="76.0" layoutY="574.0" text="Progression" textAlignment="CENTER" />
+            <Button fx:id="deleteButton" layoutX="-4.0" layoutY="613.0" mnemonicParsing="false" style="-fx-border-color: red" text="Delete" />
+            <Button fx:id="clearButton" layoutX="61.0" layoutY="613.0" mnemonicParsing="false" style="-fx-border-color: red" text="Clear" />
+         </children></AnchorPane>
+      <Pane fx:id="dropPane" layoutX="125.0" layoutY="140.0" prefHeight="344.0" prefWidth="325.0" style="-fx-background-color: gray; -fx-border-color: black" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <ImageView fitHeight="138.0" fitWidth="115.0" layoutX="229.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../drag_file.png" />
+               </image>
+            </ImageView>
+             <Label fx:id="fileDrop" layoutX="84.0" layoutY="167.0" style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: cyan;" text="Drop your file(s) here" />
+         </children></Pane>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+            <Menu text="File">
+                <MenuItem fx:id="exitProgram" text="Close" />
+            </Menu>
+          <Menu mnemonicParsing="false" text="Creator">
+            <items>
+              <MenuItem mnemonicParsing="false" text="642115032 Putthipong Ninwong" />
+                <MenuItem mnemonicParsing="false" text="642115047 Siriyakorn Chomchuen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <Label fx:id="fileList" layoutX="14.0" layoutY="315.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: black;" text="Files list (รายการไฟล์ทั้งหมด) :" />
+      <ListView fx:id="listView" layoutX="14.0" layoutY="350.0" prefHeight="330.0" prefWidth="320.0" />
+   </children>
+</AnchorPane>
